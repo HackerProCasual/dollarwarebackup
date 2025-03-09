@@ -7727,7 +7727,7 @@ do
             end
         end
 
-        if elemClasses then
+        if elemClasses and type(elemClasses) == "Table" then
             for i,v in pairs(elemClasses) do 
                 if not (v.instances) then continue end 
                 for i,v in pairs(v.instances) do 
