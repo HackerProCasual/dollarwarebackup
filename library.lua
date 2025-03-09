@@ -7727,11 +7727,12 @@ do
             end
         end
 
-        
-        for i,v in pairs(elemClasses) do 
-            if not (v.instances) then continue end 
-            for i,v in pairs(v.instances) do 
-                v:Destroy() 
+        if elemClasses then
+            for i,v in pairs(elemClasses) do 
+                if not (v.instances) then continue end 
+                for i,v in pairs(v.instances) do 
+                    v:Destroy() 
+                end
             end
         end
         
