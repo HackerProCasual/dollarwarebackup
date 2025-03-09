@@ -7717,8 +7717,10 @@ do
         ui:fireEvent('onPreDestroy')
         
         delay(0.4, function() 
-            uiScreen:Destroy()
-            uiScreen = nil
+            if uiScreen then
+                uiScreen:Destroy()
+                uiScreen = nil
+            end
         end)
         
         if (noWindows ~= true) then  
